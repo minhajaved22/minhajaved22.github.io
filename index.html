@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Minha Javed Portfolio</title>
-<meta name="description" content="Minha Javed, a product-oriented technology graduate in London. CV, plus project case studies starting with Musmapp, an app for finding mosques and prayer spaces.">
+<meta name="description" content="Minha Javed, a product-oriented technology graduate in London. CV, plus project case studies: Musmapp, an app for finding mosques and prayer spaces, and Pivot, a weekly digest for career changers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -209,6 +209,12 @@ footer p { color: var(--muted); }
   .dd.right .dd-menu { right: auto; left: 0; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .dd-btn svg { transition: none; } }
+
+.code { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; overflow-x: auto; font-size: 0.82rem; line-height: 1.55; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; margin: 10px 0 0; white-space: pre; }
+.code-cap { font-size: 0.9rem; color: var(--muted); margin-top: 18px; }
+.row ol.flow { margin: 12px 0 0; padding-left: 1.2em; }
+.row ol.flow li { margin-bottom: 6px; }
+.row h3.sub { font-size: 1.05rem; margin: 22px 0 6px; }
 </style>
 </head>
 <body>
@@ -247,7 +253,7 @@ footer p { color: var(--muted); }
             </button>
             <ul class="dd-menu" hidden></ul>
           </div>
-          <p>Start with Musmapp, a live app for finding mosques and prayer spaces.</p>
+          <p>Start with Musmapp, a live app for finding mosques and prayer spaces, or Pivot, a weekly digest for career changers.</p>
         </div>
       </div>
 
@@ -311,6 +317,14 @@ footer p { color: var(--muted); }
             <li>Independently building a mobile-first app that helps Muslims find mosques and prayer spaces. Delivering end-to-end product work including user research, PRD, competitor analysis and API integration.</li>
           </ul>
           <a class="link" href="#musmapp">Read the Musmapp case study</a>
+        </div>
+        <div class="entry">
+          <div><h3>Pivot</h3><p class="org">Career transition digest, independent product build</p></div>
+          <p class="when">2026 to present</p>
+          <ul>
+            <li>Designed, specified and built a live web app that sends career changers a weekly digest of real articles with a personal AI take. Covers the PRD, metrics, a Next.js and Postgres build, and AI safeguards that stop invented links or facts.</li>
+          </ul>
+          <a class="link" href="#pivot">Read the Pivot case study</a>
         </div>
         <div class="entry">
           <div><h3>CFA Institute Istanbul Research Challenge</h3><p class="org">ESG Analyst</p></div>
@@ -472,6 +486,183 @@ footer p { color: var(--muted); }
       </div>
     </div>
   </div>
+
+  <!-- VIEW 3: Pivot case study -->
+  <div id="view-pivot" hidden>
+    <div class="wrap">
+      <a class="back" href="#cv">Back to CV</a>
+      <div class="case">
+        <article class="feature">
+          <div>
+            <span class="status live">Live</span>
+            <h1>Pivot</h1>
+            <p class="tagline">Changing careers is easier with a weekly guide.</p>
+            <p>A free web app for people changing careers. You enter the role you have and up to three roles you want. Pivot finds fresh articles for each, Claude writes a short personal take with one suggested action for the week, and you can ask Claude questions about any article.</p>
+            <p>I took it from problem statement to PRD to a deployed product, so it shows both the product thinking and the build.</p>
+            <div class="actions">
+              <a class="chip-link" href="https://pivot-digest.vercel.app/">Try Pivot live</a>
+              <a class="chip-link alt" href="https://github.com/minhajaved22/pivot-digest">View the code</a>
+            </div>
+          </div>
+          <ul class="meta-list">
+            <li><b>Role</b>Product manager and builder</li>
+            <li><b>Built with</b>Next.js, React, TypeScript, Neon Postgres, Vercel</li>
+            <li><b>AI and data</b>Claude API, Google News RSS, Resend for email</li>
+            <li><b>Artefacts</b>PRD, metrics framework, trade-off log, working app</li>
+          </ul>
+        </article>
+
+        <div class="index">
+          <article class="row">
+            <h2>The problem</h2>
+            <div>
+              <p><b>When I am trying to move from one role to another, I want to know what to read and do this week, so that I make steady progress without sifting through generic career advice.</b></p>
+              <p>Career-change content is everywhere but unfiltered. Most newsletters are written for an average reader, and nothing ties current articles to your own starting point and target role.</p>
+            </div>
+          </article>
+
+          <article class="row">
+            <h2>The solution</h2>
+            <div>
+              <ul class="points">
+                <li><b>Personal digest.</b> 6 to 8 real, dated articles grouped by target role, with a two-line reason each one matters for your move.</li>
+                <li><b>Claude's take.</b> A short read of the week's themes, ending in one concrete action.</li>
+                <li><b>Ask about any article.</b> A chat drawer where answers stream in and stay framed around your move.</li>
+                <li><b>Save, revisit, control.</b> Saved articles, past digests, pause or delete your account in one click.</li>
+                <li><b>No password.</b> Each person gets a private link, and sign-in is emailed to them.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="row">
+            <h2>Who it is for</h2>
+            <div class="personas">
+              <div class="persona">
+                <h3>Graduate pivoter</h3>
+                <p class="who">Operations analyst aiming for product</p>
+                <p><b>Pain point.</b> Does not know which skills and portfolio pieces to build first.</p>
+                <p><b>Uses it for.</b> A clear weekly action.</p>
+              </div>
+              <div class="persona">
+                <h3>Mid-career switcher</h3>
+                <p class="who">Marketer moving into UX research</p>
+                <p><b>Pain point.</b> Little time, and needs to reframe existing experience.</p>
+                <p><b>Uses it for.</b> Short, relevant reading.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="row">
+            <h2>Product thinking</h2>
+            <div>
+              <p><b>North star: weekly engaged readers</b>, meaning people who open a digest and click, save or ask about at least one article. It measures usefulness, not just delivery.</p>
+              <p>I used HEART for metrics, MoSCoW for scope and Jobs to be Done for the problem. The targets are proposed starting points to validate with real usage, not results.</p>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr><th>Dimension</th><th>Metric</th><th>Proposed target</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Happiness</td><td>Chat answers rated helpful</td><td>70% or more</td></tr>
+                    <tr><td>Engagement</td><td>Articles clicked, saved or asked about per digest</td><td>2 or more</td></tr>
+                    <tr><td>Adoption</td><td>Sign-ups who generate a first digest</td><td>80% or more</td></tr>
+                    <tr><td>Retention</td><td>Users still opening a digest after 4 weeks</td><td>30% or more</td></tr>
+                    <tr><td>Task success</td><td>Users who take the suggested weekly action</td><td>25% or more</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 class="sub">Decisions I had to make</h3>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr><th>Decision</th><th>Chosen over</th><th>Why</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Google News RSS</td><td>NewsAPI</td><td>NewsAPI's free tier blocks production use, and RSS needs no key</td></tr>
+                    <tr><td>Private link, no password</td><td>Email and password</td><td>Less friction and nothing sensitive to leak. The cost is that a lost link needs email to recover</td></tr>
+                    <tr><td>AI reads headlines only</td><td>Full article text</td><td>Avoids scraping and copyright issues and keeps cost low. The cost is shallower summaries, which the app says openly</td></tr>
+                    <tr><td>Weekly cadence</td><td>Daily</td><td>Matches how fast career moves happen and limits email fatigue</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+
+          <article class="row">
+            <h2>Technical build</h2>
+            <div>
+              <p>A Next.js App Router app written in TypeScript, deployed on Vercel, with Neon Postgres for data. Server routes call the Claude API directly and tables create themselves on first use.</p>
+              <ol class="flow">
+                <li><b>Fetch.</b> For each target role, three Google News RSS queries run in parallel, then results are de-duplicated into a candidate list.</li>
+                <li><b>Choose.</b> Claude receives the candidates as a numbered list and returns JSON: a take, plus the index, summary and tags of the best 6 to 8.</li>
+                <li><b>Validate.</b> Every returned index is checked against the real candidates. Anything invalid or duplicated is dropped, so links can only come from the feed.</li>
+                <li><b>Store and show.</b> The digest and articles are saved to Postgres and rendered on the reader's private page.</li>
+                <li><b>Chat.</b> Questions stream back from the Claude API as plain text, and the answer is saved when it ends.</li>
+                <li><b>Email.</b> A Vercel cron job runs daily and sends each due account its digest through Resend, at most once in five days.</li>
+              </ol>
+              <h3 class="sub">Safeguards</h3>
+              <ul class="points">
+                <li><b>Grounded summaries.</b> The model only sees headline, source and date, and is told never to invent facts, figures or quotes.</li>
+                <li><b>Inputs as data.</b> User text is cleaned and passed as data, never as instructions.</li>
+                <li><b>Abuse limits.</b> 3 new digests per account per day and 30 chat questions per hour.</li>
+                <li><b>Private access.</b> A 64-character random token in the link is the credential, and deleting an account removes everything.</li>
+              </ul>
+              <p class="code-cap">Validating the AI's picks against the real articles, so a link can never be made up:</p>
+<pre class="code">for (const a of parsed.articles.slice(0, 10)) {
+  const idx = Number(a.index);
+  if (!Number.isInteger(idx) || idx &lt; 0 || idx &gt;= candidates.length || used.has(idx)) continue;
+  used.add(idx);
+  const tags = Array.isArray(a.tags) ? a.tags.map(String).filter((t) =&gt; TAGS.includes(t)).slice(0, 2) : [];
+  picked.push({ c: candidates[idx], summary: String(a.summary ?? "").slice(0, 400), tags });
+}</pre>
+              <p class="code-cap">A per-account daily limit, checked in the database before any AI call is made:</p>
+<pre class="code">const recent = await sql()`select count(*)::int as n from digests
+  where profile_id = ${profile.id} and created_at &gt; now() - interval '24 hours'`;
+if ((recent[0]?.n ?? 0) &gt;= 3) return json({ error: "You have reached today's limit of 3 new digests." }, 429);</pre>
+              <p class="code-cap">Private access: a random 256-bit token instead of a password.</p>
+<pre class="code">export function newToken(): string {
+  return randomBytes(32).toString("hex");
+}</pre>
+              <p class="code-cap">The full source is in the repository, including the database schema, API routes and email template.</p>
+            </div>
+          </article>
+
+          <article class="row">
+            <h2>Honest limits</h2>
+            <div>
+              <ul class="points">
+                <li>Summaries come from headlines only, so they are shallower than a full read. Whether that is enough is the first thing to test.</li>
+                <li>The metric targets are proposals. I have tested the full flow myself but have no real usage data yet.</li>
+                <li>Weekly email needs a verified sending domain before it can go to other people, so for now readers use their private link.</li>
+                <li>There is no thumbs up or down yet, so the happiness metric cannot be measured.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="row">
+            <h2>What comes next</h2>
+            <ol class="phases">
+              <li class="now">
+                <b>Now</b>
+                <strong>Test with about 10 career changers</strong>
+                <p>Read their digests with them, tune role search terms, and add thumbs up or down.</p>
+              </li>
+              <li>
+                <b>Next</b>
+                <strong>Switch on weekly email</strong>
+                <p>Verify a domain, then measure 4 week retention with email on and off.</p>
+              </li>
+              <li>
+                <b>Later</b>
+                <strong>More sources</strong>
+                <p>Add newsletters, reports and job boards beyond Google News.</p>
+              </li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 <footer id="contact">
@@ -491,7 +682,8 @@ footer p { color: var(--muted); }
 <script>
 /* Add a project here, then add a matching <div id="view-ID" hidden> block above. */
 var PROJECTS = [
-  { id: "musmapp", name: "Musmapp", blurb: "Find mosques and prayer spaces in London" }
+  { id: "musmapp", name: "Musmapp", blurb: "Find mosques and prayer spaces in London" },
+  { id: "pivot", name: "Pivot", blurb: "A weekly digest for career changers" }
 ];
 
 (function () {
